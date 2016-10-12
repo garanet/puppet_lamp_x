@@ -20,15 +20,16 @@ sudo service puppetmaster restart
 
 #Client Centos 3.10.0-327.el7.x86_64
 
-/opt/puppetlabs/bin/puppet agent —test —noop
+/opt/puppetlabs/bin/puppet agent —test
 
 #Client Ubuntu 14.04.1:
 
-puppet agent --test —noop
+puppet agent --test
 
 Now via browser you should see the PHPINFO page from the client.
 
 Remember, you can install more and more modules from puppet or git community (that’s the best part of opensource), like :
 
 puppet module install puppetlabs-mysql
+
 puppet module install saz/ntp
