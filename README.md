@@ -8,13 +8,15 @@ Server - Ubuntu 16.04.1 LTS - 192.168.0.200/24 - PuppetMaster 3.8.5
 
 #On the Puppet Server machine:
 
+puppet module install puppetlabs-stdlib
+
 cd /etc/puppet/modules/
 
 git clone https://github.com/garanet/puppet_lamp_x.git
 
 echo node default { include lamp } >> manifests/site.pp
 
-sudo service puppetmaster restart
+service puppetmaster restart
 
 #On the Clients:
 
